@@ -1,5 +1,5 @@
 module.exports = function() {
     var greet = document.createElement('div');
-    greet.textContent = "Hi there and greetings!";
+    greet.textContent = "I am 2222!";
     return greet;
 }
