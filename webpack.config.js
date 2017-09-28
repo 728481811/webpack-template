@@ -7,7 +7,7 @@ module.exports = {
 	devtool: "source-map",
 	devServer: {
 		contentBase: './dist',
-		port: '1000',
+		port: '8000',
 		inline: true,
 		historyApiFallback: true
 	}
