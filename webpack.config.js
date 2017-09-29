@@ -10,5 +10,18 @@ module.exports = {
 		port: '8000',
 		inline: true,
 		historyApiFallback: true
+	},
+	module: {
+		loaders: [{
+			test: /\.json$/,
+			loader: "json-loader"
+		},{
+			test: /\.js$/,
+			exclude: /node_modules/,
+			loader: "babel-loader"
+		},{
+			test: /\.css$/,
+			use: ['style-loader', 'css-loader']
+		}]
 	}
 }
