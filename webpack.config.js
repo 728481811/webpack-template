@@ -1,3 +1,4 @@
+var webpack = require("webpack");
 module.exports = {
 	entry: __dirname + '/src/main.js',
 	output: {
@@ -21,7 +22,10 @@ module.exports = {
 			loader: "babel-loader"
 		},{
 			test: /\.css$/,
-			use: ['style-loader', 'css-loader']
+			use: ['style-loader', 'css-loader?modules']
 		}]
-	}
+	},
+	plugins: [
+        new webpack.BannerPlugin("Copyright Flying Unicorns inc.")//在这个数组中new一个实例就可以了
+    ]
 }
